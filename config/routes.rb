@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   resources :tweets, only: :create
   resources :users, only: [:index, :show]
 
+  get "followers/:id" => "pages#followers", as: :followers_users
+
+
 end

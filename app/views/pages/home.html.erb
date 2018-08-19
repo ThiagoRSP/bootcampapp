@@ -3,7 +3,7 @@
 <% if user_signed_in? %>
 	Olá, <%= current_user.email %> 
 	<hr>
-	<h2>Followers (<%= @user.followers.count %>)</h2>
+	<p><%= link_to "Followers", followers_users_path(@user) %>(<%= @user.followers.count %>)</p>
 	
 	<h2>Lista de Tweets</h2>
 	<%= form_for @tweet do |f| %>

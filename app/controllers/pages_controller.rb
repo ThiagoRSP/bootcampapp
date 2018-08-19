@@ -8,4 +8,8 @@ class PagesController < ApplicationController
 
 	end
 
+	def followers
+		@user = User.find(params[:id])
+	end
+
 end

@@ -1,6 +1,6 @@
 <h1>Perfil de <%= @user.email %></h1>
 <h2>Tweets (<%= @user.tweets.count %>)</h2>
-<h2>Followers (<%= @user.followers.count %>)</h2>
+<h2><p><%= link_to "Followers", followers_users_path %>(<%= @user.followers.count %>)</p></h2>
 	
 <% if @user.tweets.empty? %>
 	<p>Usuário ainda não tem tweet</p>
